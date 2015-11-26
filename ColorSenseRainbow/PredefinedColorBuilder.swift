@@ -48,7 +48,7 @@ class PredefinedColorBuilder: ColorBuilder {
         numberFormatter.decimalSeparator = "."
         
         var returnString = colorStringForType( forSearchResult.colorType )
-        returnString += "Color ( red: "
+        returnString += "Color(red: "
         if let modifiedString = numberFormatter.stringFromNumber( Double ( color.redComponent ) ) {
             returnString += modifiedString
         } else {
@@ -74,7 +74,7 @@ class PredefinedColorBuilder: ColorBuilder {
         
         // Always include the alpha component as it is impossible to tell if there is
         // an extionsion to handle the creation of colours without it.
-        returnString += ", alpha: \(color.alphaComponent) )"
+        returnString += ", alpha: \(color.alphaComponent))"
         
         return returnString
     }
